@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第5章 子图绘制与布局 - 数据可视化</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>第5章 子图绘制与布局</h1>
+            <p>数据可视化子图绘制实践与布局优化</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- 控制面板 -->
+            <section class="control-panel">
+                <h2>子图配置控制面板</h2>
+                <div class="controls-grid">
+                    <div class="control-group">
+                        <label for="subplotLayout">子图布局:</label>
+                        <select id="subplotLayout">
+                            <option value="2x2">2×2 网格</option>
+                            <option value="2x3">2×3 网格</option>
+                            <option value="3x2">3×2 网格</option>
+                            <option value="3x3">3×3 网格</option>
+                            <option value="1x4">1×4 单行</option>
+                            <option value="4x1">4×1 单列</option>
+                            <option value="irregular">不规则布局</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="chartType">图表类型:</label>
+                        <select id="chartType">
+                            <option value="line">折线图</option>
+                            <option value="bar">柱状图</option>
+                            <option value="pie">饼图</option>
+                            <option value="scatter">散点图</option>
+                            <option value="area">面积图</option>
+                            <option value="radar">雷达图</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="colorScheme">配色方案:</label>
+                        <select id="colorScheme">
+                            <option value="default">默认</option>
+                            <option value="ocean">海洋</option>
+                            <option value="sunset">日落</option>
+                            <option value="forest">森林</option>
+                            <option value="rainbow">彩虹</option>
+                            <option value="monochrome">单色</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="dataSet">数据集:</label>
+                        <select id="dataSet">
+                            <option value="factory">工厂产品分析</option>
+                            <option value="climate">气象数据分析</option>
+                            <option value="social">社交媒体数据</option>
+                            <option value="economic">经济指标数据</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="animation">动画效果:</label>
+                        <select id="animation">
+                            <option value="none">无动画</option>
+                            <option value="bounce">弹跳</option>
+                            <option value="fade">渐变</option>
+                            <option value="slide">滑动</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <button id="updateCharts" class="btn-primary">更新图表</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 子图展示区域 -->
+            <section class="subplots-section">
+                <h2>子图展示区域</h2>
+                <div class="subplots-grid" id="subplotsGrid">
+                    <!-- 子图将通过JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <!-- 布局预设 -->
+            <section class="presets-section">
+                <h2>布局预设模板</h2>
+                <div class="preset-buttons">
+                    <button class="preset-btn" onclick="applyPreset('grid2x2')">
+                        <span class="preset-icon">📊</span>
+                        <span class="preset-text">2×2 网格</span>
+                    </button>
+                    <button class="preset-btn" onclick="applyPreset('grid2x3')">
+                        <span class="preset-icon">📈</span>
+                        <span class="preset-text">2×3 网格</span>
+                    </button>
+                    <button class="preset-btn" onclick="applyPreset('complex')">
+                        <span class="preset-icon">🔀</span>
+                        <span class="preset-text">复合布局</span>
+                    </button>
+                    <button class="preset-btn" onclick="applyPreset('irregular')">
+                        <span class="preset-icon">⚡</span>
+                        <span class="preset-text">不规则布局</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 图表操作 -->
+            <section class="actions-section">
+                <h2>图表操作</h2>
+                <div class="action-buttons">
+                    <button class="btn-secondary" onclick="resetAll()">重置所有</button>
+                    <button class="btn-secondary" onclick="exportAll()">导出所有</button>
+                    <button class="btn-secondary" onclick="toggleFullscreen()">全屏显示</button>
+                    <button class="btn-secondary" onclick="refreshData()">刷新数据</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 第5章 子图绘制与布局 - 数据可视化项目</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
