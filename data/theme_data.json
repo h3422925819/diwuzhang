@@ -1,0 +1,113 @@
+{
+  "sales": {
+    "monthlyTrend": {
+      "categories": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+      "actual": [120, 142, 168, 155, 178, 195, 210, 198, 185, 205, 220, 245],
+      "target": [130, 140, 160, 160, 180, 190, 200, 200, 190, 210, 220, 240]
+    },
+    "productDistribution": [
+      { "name": "产品A", "value": 350, "growth": 12.5 },
+      { "name": "产品B", "value": 280, "growth": 8.3 },
+      { "name": "产品C", "value": 420, "growth": 15.8 },
+      { "name": "产品D", "value": 190, "growth": 6.2 },
+      { "name": "产品E", "value": 240, "growth": 10.1 }
+    ],
+    "targetAchievement": [
+      { "month": "Q1", "actual": 95, "target": 100 },
+      { "month": "Q2", "actual": 108, "target": 105 },
+      { "month": "Q3", "actual": 98, "target": 110 },
+      { "month": "Q4", "actual": 112, "target": 115 }
+    ],
+    "channels": [
+      { "name": "线上销售", "value": 45, "trend": "up" },
+      { "name": "线下门店", "value": 35, "trend": "stable" },
+      { "name": "经销商", "value": 20, "trend": "down" }
+    ]
+  },
+  "regional": {
+    "salesDistribution": [
+      { "name": "华北", "value": 350, "growth": 12.5 },
+      { "name": "华东", "value": 420, "growth": 15.8 },
+      { "name": "华南", "value": 280, "growth": 8.3 },
+      { "name": "华中", "value": 190, "growth": 6.2 },
+      { "name": "西南", "value": 240, "growth": 10.1 }
+    ],
+    "growthTrend": {
+      "categories": ["1月", "2月", "3月", "4月", "5月", "6月"],
+      "regions": {
+        "华北": [100, 105, 112, 108, 115, 120],
+        "华东": [120, 128, 135, 140, 148, 155],
+        "华南": [80, 85, 88, 92, 95, 98]
+      }
+    },
+    "marketShare": [
+      { "company": "我公司", "share": 28.5 },
+      { "company": "竞争对手A", "share": 22.3 },
+      { "company": "竞争对手B", "share": 18.7 },
+      { "company": "竞争对手C", "share": 15.2 }
+    ]
+  },
+  "customer": {
+    "structure": [
+      { "type": "VIP客户", "count": 1250, "percentage": 18.5 },
+      { "type": "活跃客户", "count": 2890, "percentage": 42.8 },
+      { "type": "普通客户", "count": 1980, "percentage": 29.3 },
+      { "type": "沉睡客户", "count": 630, "percentage": 9.4 }
+    ],
+    "satisfaction": [
+      { "aspect": "产品质量", "score": 4.3 },
+      { "aspect": "客户服务", "score": 4.1 },
+      { "aspect": "物流配送", "score": 4.5 },
+      { "aspect": "价格合理性", "score": 3.9 },
+      { "aspect": "用户体验", "score": 4.2 }
+    ],
+    "lifecycle": {
+      "stages": ["新客户", "活跃期", "成熟期", "衰退期"],
+      "counts": [320, 1580, 2890, 680],
+      "values": [500, 1200, 2800, 800]
+    }
+  },
+  "trend": {
+    "longTerm": {
+      "years": ["2019", "2020", "2021", "2022", "2023", "2024"],
+      "revenue": [850, 920, 1100, 1350, 1680, 2100],
+      "profit": [120, 150, 180, 240, 320, 420]
+    },
+    "seasonal": {
+      "months": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+      "data2022": [120, 135, 155, 145, 168, 185, 175, 190, 165, 185, 195, 220],
+      "data2023": [145, 160, 180, 175, 195, 210, 200, 215, 195, 210, 225, 245]
+    },
+    "forecast": {
+      "months": ["7月", "8月", "9月", "10月", "11月", "12月"],
+      "actual": [210, 225, 240, null, null, null],
+      "forecast": [null, null, null, 255, 265, 280],
+      "lower": [null, null, null, 245, 250, 265],
+      "upper": [null, null, null, 265, 280, 295]
+    }
+  },
+  "performance": {
+    "kpi": {
+      "indicators": ["销售完成率", "客户满意度", "利润率", "库存周转率"],
+      "current": [95, 88, 12.5, 8.2],
+      "target": [100, 90, 15, 10]
+    },
+    "ranking": [
+      { "name": "张三", "score": 95, "rank": 1 },
+      { "name": "李四", "score": 92, "rank": 2 },
+      { "name": "王五", "score": 88, "rank": 3 },
+      { "name": "赵六", "score": 85, "rank": 4 }
+    ],
+    "efficiency": [
+      { "department": "销售部", "efficiency": 92, "cost": 850 },
+      { "department": "市场部", "efficiency": 88, "cost": 620 },
+      { "department": "技术部", "efficiency": 95, "cost": 1200 },
+      { "department": "客服部", "efficiency": 85, "cost": 480 }
+    ],
+    "suggestions": [
+      { "area": "产品质量", "priority": "高", "impact": 85 },
+      { "area": "客户服务", "priority": "中", "impact": 65 },
+      { "area": "物流优化", "priority": "高", "impact": 78 }
+    ]
+  }
+}
